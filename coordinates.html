@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Coordinates</title>
+    <style>
+        #xyContent {
+            width: 400px;
+            height: 300px;
+            margin: 200px auto 0px auto;
+            background-color: white;
+        }
+
+        #inputArea2 {
+            width: 250px;
+            height: 200px;
+            background-color: #dddddd;
+            border: 1px solid #939393;
+        }
+    </style>
+</head>
+<body>
+    <div id="xyContent">
+        <h1 style="font-size:40px;">Image Position Page</h1>
+        <div id="inputArea2">
+            <br />
+            &nbsp; &nbsp; <span style="font-size:18px;">Vertical Position:</span><br />
+            &nbsp; &nbsp; <input type="number" id="vertical" width="10" onchange="move()" /><br /><br />
+            &nbsp; &nbsp; <span style="font-size:18px;">Horizontal Position:</span><br />
+            &nbsp; &nbsp; <input type="number" id="horizontal" width="10" onchange="move()" /><br />
+        </div>
+    </div>
+    <img id="image" src="images/img.png" width="150" height="150" alt="pandaImage" style="position:absolute; left:0px; top:0px;" />
+    <script type="text/javascript">
+    function move() {
+        var x_coordinate = document.getElementById("horizontal").value;
+        var y_coordinate = document.getElementById("vertical").value;
+        var img = document.getElementById("image");
+        if (x_coordinate == null || x_coordinate == "") {
+            x_coordinate = 0;
+        }
+        if (y_coordinate == null || y_coordinate == "") {
+            y_coordinate = 0;
+        }
+        img.style.left = x_coordinate + "px";
+        img.style.top = y_coordinate + "px";
+    }
+    </script>
+</body>
+</html>

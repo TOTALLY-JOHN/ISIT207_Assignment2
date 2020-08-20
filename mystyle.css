@@ -1,0 +1,109 @@
+#main {
+    width: auto;
+    height: auto;
+    background-color: white;
+    margin: 0px auto 0px auto;
+}
+
+header {
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+section {
+    /*The element is positioned relative to its normal position, 
+    so "left:30px" adds 30 pixels to the element's LEFT position */
+    position: relative;
+    margin-top: 350px;
+    margin-left: 230px;
+}
+
+aside {
+    /*The element of 'fixed' is positioned relative to the browser window.*/
+    position: fixed;
+    right: 12px;
+    top: 132px;
+
+    /*z-index property means an element's stack order.*/
+    z-index: 1;
+}
+
+#headerPart {
+    height:80px;
+    background-color:white;
+}
+
+#menu {
+    padding-top:10px;
+
+    /*Static is default value. Elements render in order, as they appear in the document flow*/
+    position:static;
+    margin-top:-400px;
+    margin-left:1003px;
+    width:500px;
+    height:70px;
+    background-color:white;
+}
+
+/*Remove underline of hyperlink*/
+a {
+    text-decoration: none;
+}
+
+#menuText {
+    font-size:22px;
+    font-family: Arial;
+}
+
+#menuText:link {
+    color: black;
+}
+
+/* Visited : Selects all visited links (Pseudo Selector 2) */
+#menuText:visited {
+    color: black;
+}
+
+/* Selects links on mouse over (Pseudo Selector 3) */
+#menuText:hover {
+    color: indianred;
+}
+
+/* Selects the active link (Pseudo Selector 4) */
+#menuText:active {
+    color: azure;
+}
+
+/* Link : Selects all unvisited links */
+#footerLink:link {
+    color: #eeeeee;
+}
+
+/* Visited : Selects all visited links */
+#footerLink:visited {
+    color: #eeeeee;
+}
+
+/* Selects links on mouse over */
+#footerLink:hover {
+    color: dimgrey;
+}
+
+/* Selects the active link */
+#footerLink:active {
+    color: white;
+}
+
+/* pseudo selector 5*/
+input:focus {
+    background-color:#ececec;
+}
+
+tr:nth-child(odd) {
+    background-color: #d2d2d2;
+}
+
+tr:hover {
+    background-color: #f8f6a0;
+}
